@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "527513696868",
+    "project_id": "los-yoyos",
+    "storage_bucket": "los-yoyos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527513696868:android:1359f21374931a70dcbd71",
+        "android_client_info": {
+          "package_name": "com.example.los_yoyos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527513696868-rdedk6atgob2ic1pe00nel8051r5htr8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLs_3lmB4INhroQts0ZxK9usCWnyX306w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527513696868-rdedk6atgob2ic1pe00nel8051r5htr8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
