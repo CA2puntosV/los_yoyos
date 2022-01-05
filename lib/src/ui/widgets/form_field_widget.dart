@@ -196,40 +196,33 @@ class _FormFieldWidgetState extends State<FormFieldWidget> {
             primary: Colors.orange,
             onSurface: Colors.blueGrey[600],
           ),
-          onPressed: _nameController.text.isEmpty &&
-                      _emailController.text.isEmpty &&
-                      _positionController.text.isEmpty &&
-                      _wageController.text.isEmpty ||
-                  _idValue == null
-              ? null //TODO fix validations
-              : () async {
-                  if (_globalKey.currentState!.validate()) {
-                    bool rps = await LosYoyosApi().saveNewUser(
-                      fullName: _nameController.text,
-                      email: _emailController.text,
-                      position: _positionController.text,
-                      wage: _wageController.text,
-                      userId: _idValue.toString(),
-                    );
-                    if (rps) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content:
-                              const Text('New User Successfully Registered'),
-                          backgroundColor: lightRed,
-                        ),
-                      );
-                    } else {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Something went wrong'),
-                          backgroundColor: Colors.red,
-                        ),
-                      );
-                    }
-                    Navigator.pop(context);
-                  }
-                }),
+          onPressed: () async {
+            if (_globalKey.currentState!.validate()) {
+              bool rps = await LosYoyosApi().saveNewUser(
+                fullName: _nameController.text,
+                email: _emailController.text,
+                position: _positionController.text,
+                wage: _wageController.text,
+                userId: _idValue.toString(),
+              );
+              if (rps) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: const Text('New User Successfully Registered'),
+                    backgroundColor: lightRed,
+                  ),
+                );
+              } else {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Something went wrong'),
+                    backgroundColor: Colors.red,
+                  ),
+                );
+              }
+              Navigator.pop(context);
+            }
+          }),
     );
   }
 
@@ -259,3 +252,9 @@ class _FormFieldWidgetState extends State<FormFieldWidget> {
     );
   }
 }
+  // _nameController.text.isEmpty &&
+          //             _emailController.text.isEmpty &&
+          //             _positionController.text.isEmpty &&
+          //             _wageController.text.isEmpty ||
+          //         _idValue == null
+               //TODO fix validations
