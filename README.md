@@ -1,11 +1,5 @@
 # los Yoyos
 
-* v.1.0.0
-
-## Video illustration
-
-https://user-images.githubusercontent.com/57653731/144914683-d74d1ca8-6d05-431d-b629-28573170d56b.mp4
-
 ## Data taken from 
 
 --> [Repository](https://raw.githubusercontent.com/sapardo10/content/master/RH.json)

@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   // Padding(
                   //   padding: const EdgeInsets.all(8.0),
                   //   child: IconButton(
@@ -42,8 +42,8 @@ class HomeScreen extends StatelessWidget {
                   //     },
                   //   ),
                   // ),
-                  const Expanded(child: SizedBox()),
-                  const Padding(
+                  Expanded(child: SizedBox()),
+                  Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text(
                       'Los Yoyos\nResources',

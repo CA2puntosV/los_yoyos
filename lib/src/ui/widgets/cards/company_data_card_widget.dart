@@ -17,7 +17,7 @@ class CompanyDataCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTapDown: (TapDownDetails details) {
-        print('ci');
+        print('tap');
       },
       child: Container(
         child: Row(
